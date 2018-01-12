@@ -15,5 +15,19 @@ pipeline {
         }
       }
     }
+    stage('buildPublish') {
+      parallel {
+        stage('buildPublish') {
+          steps {
+            hygieiaBuildPublishStep(buildStatus: 'success')
+          }
+        }
+        stage('mvnBuild') {
+          steps {
+            sh 'mvn install'
+          }
+        }
+      }
+    }
   }
 }
