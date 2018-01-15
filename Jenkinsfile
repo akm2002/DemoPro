@@ -11,6 +11,7 @@ pipeline {
         stage('mvnTest') {
           steps {
             sh 'mvn test'
+            hygieiaBuildPublishStep(buildStatus: 'Failure')
           }
         }
       }
