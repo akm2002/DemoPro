@@ -10,7 +10,7 @@ pipeline {
         }
         stage('mvnTest') {
           steps {
-            sh 'mvn test'
+            sh 'mvn surefire-report:report'
             hygieiaBuildPublishStep(buildStatus: 'Failure')
           }
         }
