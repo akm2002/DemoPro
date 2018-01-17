@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('buildproject') {
       steps {
-        sh 'mvn -Pdev clean package -Dmaven.test.skip=true'
+        sh 'mvn install -Dmaven.test.skip=true'
       }
     }
     stage('runtest') {
