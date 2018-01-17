@@ -13,7 +13,7 @@ pipeline {
     }
     stage('hygieia codeQuality') {
       steps {
-        hygieiaCodeQualityPublishStep(junitFilePattern: 'target/surefire-reports/*xml')
+        hygieiaCodeQualityPublishStep(junitFilePattern: 'activerules.pb')
       }
     }
   }
