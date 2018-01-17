@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('buildproject') {
       steps {
-        sh 'mvn clean install'
+        sh 'mvn install'
       }
     }
     stage('runtest') {
