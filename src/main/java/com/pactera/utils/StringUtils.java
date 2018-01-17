@@ -1,4 +1,4 @@
-package main.com.pactera.utils;
+package main.java.com.pactera.utils;
 
 public class StringUtils {
 
